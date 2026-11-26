@@ -16,7 +16,7 @@ body {
 .game-container {
     width: 90%;
     max-width: 950px;
-    margin: 30px auto;
+    margin: 10px auto;
 }
 
 h1 {
@@ -59,9 +59,9 @@ h1 {
 /* The white box where the circle appears */
 #game-area {
     position: relative;   /* the circle is positioned inside this box */
-    height: 50vh;          /* half of the screen height */
-    min-height: 260px;
-    margin-top: 15px;
+    height: 42vh;          /* a bit less than half of the screen height */
+    min-height: 220px;
+    margin-top: 10px;
     overflow: hidden;
     background-color: white;
     border: 5px solid #17365d;
@@ -87,6 +87,7 @@ h1 {
 
 /* Text under the game box */
 #message {
+    margin: 10px 0;
     font-size: clamp(16px, 2.2vw, 26px);
     font-weight: bold;
     color: #17365d;
