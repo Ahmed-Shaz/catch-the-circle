@@ -1,0 +1,111 @@
+/* Catch the Circle: styles */
+
+/* Padding and border are counted inside the width and height */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e8f1ff;
+    text-align: center;
+}
+
+/* The column that holds the whole game */
+.game-container {
+    width: 90%;
+    max-width: 950px;
+    margin: 30px auto;
+}
+
+h1 {
+    color: #17365d;
+    font-size: 40px;
+}
+
+/* Score and time, side by side */
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Start button */
+#start-button {
+    padding: 10px 20px;
+    font-size: 30px;
+    color: rgb(52, 4, 4);
+    background-color: aqua;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: tomato;
+}
+
+/* While a game is running the button is switched off */
+#start-button:disabled {
+    background-color: aqua;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* The white box where the circle appears */
+#game-area {
+    position: relative;   /* the circle is positioned inside this box */
+    height: 550px;
+    margin-top: 20px;
+    overflow: hidden;
+    background-color: white;
+    border: 5px solid #17365d;
+    border-radius: 25px;
+}
+
+/* The red circle (hidden until the game starts) */
+#target {
+    display: none;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ff3b3b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    touch-action: manipulation;   /* no double-tap zoom on phones */
+}
+
+#target:hover {
+    background-color: #d93636;
+}
+
+/* Text under the game box */
+#message {
+    font-size: 28px;
+    font-weight: bold;
+    color: #17365d;
+}
+
+/* Smaller screens (phones) */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .game-info {
+        gap: 20px;
+        font-size: 30px;
+    }
+
+    #start-button {
+        font-size: 24px;
+    }
+
+    #game-area {
+        height: 320px;
+    }
+}

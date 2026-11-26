@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A small browser game: click the red circle as many times as you can in 30 seconds.">
+    <title>Catch the Circle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Catch the Circle</h1>
+
+        <!-- Score and time left -->
+        <div class="game-info">
+            <p>Score: <span id="score">0</span></p>
+            <p>Time: <span id="time">30</span></p>
+        </div>
+
+        <button id="start-button" type="button">Start Game</button>
+
+        <!-- The red circle moves around inside this box -->
+        <div id="game-area">
+            <button id="target" type="button" aria-label="Red circle"></button>
+        </div>
+
+        <p id="message">Click "Start Game" to begin!</p>
+    </div>
+
+    <!-- The game code is in main.js -->
+    <script src="main.js"></script>
+</body>
+</html>
