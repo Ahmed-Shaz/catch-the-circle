@@ -21,7 +21,8 @@ body {
 
 h1 {
     color: #17365d;
-    font-size: 40px;
+    font-size: clamp(24px, 4vw, 40px);   /* grows and shrinks with the screen */
+    margin: 10px 0;
 }
 
 /* Score and time, side by side */
@@ -29,14 +30,14 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 50px;
+    font-size: clamp(24px, 4vw, 44px);
     font-weight: bold;
 }
 
 /* Start button */
 #start-button {
     padding: 10px 20px;
-    font-size: 30px;
+    font-size: clamp(18px, 2.5vw, 28px);
     color: rgb(52, 4, 4);
     background-color: aqua;
     border: none;
@@ -58,8 +59,9 @@ h1 {
 /* The white box where the circle appears */
 #game-area {
     position: relative;   /* the circle is positioned inside this box */
-    height: 550px;
-    margin-top: 20px;
+    height: 50vh;          /* half of the screen height */
+    min-height: 260px;
+    margin-top: 15px;
     overflow: hidden;
     background-color: white;
     border: 5px solid #17365d;
@@ -85,27 +87,14 @@ h1 {
 
 /* Text under the game box */
 #message {
-    font-size: 28px;
+    font-size: clamp(16px, 2.2vw, 26px);
     font-weight: bold;
     color: #17365d;
 }
 
 /* Smaller screens (phones) */
 @media (max-width: 500px) {
-    h1 {
-        font-size: 30px;
-    }
-
     .game-info {
         gap: 20px;
-        font-size: 30px;
-    }
-
-    #start-button {
-        font-size: 24px;
-    }
-
-    #game-area {
-        height: 320px;
     }
 }
